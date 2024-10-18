@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathJax Example with Navigation</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+        }
+        /* Side navigation styles */
+        .side-nav {
+            width: 200px;
+            background-color: #f4f4f4;
+            padding: 15px;
+            height: 100vh; /* Full height */
+        }
+        .side-nav a {
+            display: block;
+            color: #333;
+            padding: 10px;
+            text-decoration: none;
+            margin: 5px 0;
+        }
+        .side-nav a:hover {
+            background-color: #ddd;
+        }
+        /* Main content styles */
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        /* Top right menu styles */
+        .top-menu {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .top-menu button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+        /* Dropdown menu styles */
+        .dropdown {
+            display: none;
+            position: absolute;
+            background-color: white;
+            border: 1px solid #ccc;
+            right: 0;
+            margin-top: 5px;
+            z-index: 1;
+        }
+        .dropdown a {
+            display: block;
+            color: #333;
+            padding: 10px;
+            text-decoration: none;
+        }
+        .dropdown a:hover {
+            background-color: #f1f1f1;
+        }
+        .top-menu:hover .dropdown {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="side-nav">
+        <h2>Navigation</h2>
+        <a href="#section1">Section 1</a>
+        <a href="#section2">Section 2</a>
+        <a href="#section3">Section 3</a>
+        <a href="#section4">Section 4</a>
+    </div>
+
+    <div class="main-content">
+        <div class="top-menu">
+            <button>Menu</button>
+            <div class="dropdown">
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+        
+        <h1>MathJax Example</h1>
+        <p>This is a simple example of using MathJax to display mathematical notation on a webpage.</p>
+
+        <div class="equation">
+            Inline math: \( E = mc^2 \)
+        </div>
+
+        <div class="equation">
+            Block math:
+            \[
+            \int_0^\infty e^{-x^2} \, dx = \frac{\sqrt{\pi}}{2}
+            \]
+        </div>
+
+        <p>For more complex expressions, you can use LaTeX syntax within your HTML!</p>
+    </div>
+</body>
+</html>
